@@ -16,17 +16,13 @@ public class GameManagerScript : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            
-            //
-        }
+      
         IsClear();
     }
 
     private void IsClear()
     {
-        for(int i = 0; i < itemObject.Length; i++)
+        for (int i = 0; i < itemObject.Length; i++)
         {
             if (itemObject[i] != null) { return; }
         }

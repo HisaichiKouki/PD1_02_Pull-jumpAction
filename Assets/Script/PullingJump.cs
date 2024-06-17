@@ -9,6 +9,7 @@ public class PullingJump : MonoBehaviour
     [SerializeField, Header("ÉpÉèÅ[")] private float power_=10;
 
     private bool isCanJump = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,7 @@ public class PullingJump : MonoBehaviour
             Vector3 dist=clickPosition_ - Input.mousePosition;
             if (dist.sqrMagnitude == 0) { return; }
             rb_.velocity=dist.normalized*power_;
-
+            ShotCountScript.shotCounter++;
         }
 
        

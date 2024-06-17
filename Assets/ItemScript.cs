@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ItemScript : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem particleprefab;
+
     private Animator m_Animator;
     private AudioSource m_AudioSource;
     private bool isPlaySE = false;
@@ -24,6 +26,7 @@ public class ItemScript : MonoBehaviour
     {
         m_Animator.SetTrigger("Get");
         if(!isPlaySE) m_AudioSource.Play();
+        particleprefab.Play();
         isPlaySE = true;
      //   DestroySelf();
 
