@@ -39,7 +39,7 @@ public class PullingJump : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("ÚG‚µ‚½");
+       // Debug.Log("ÚG‚µ‚½");
         //isCanJump = true;
     }
     private void OnCollisionStay(Collision collision)
@@ -55,11 +55,11 @@ public class PullingJump : MonoBehaviour
         {
             isCanJump = true;
         }
-        Debug.Log("ÚG‚µ‚Ä‚¢‚é");
+        //Debug.Log("ÚG‚µ‚Ä‚¢‚é");
     }
     private void OnCollisionExit(Collision collision)
     {
-        Debug.Log("—£‚ê‚½");
+        //Debug.Log("—£‚ê‚½");
         isCanJump = false;
     }
 

@@ -5,10 +5,13 @@ using UnityEngine;
 public class ItemScript : MonoBehaviour
 {
     private Animator m_Animator;
+    private AudioSource m_AudioSource;
+    private bool isPlaySE = false;
     // Start is called before the first frame update
     void Start()
     {
         m_Animator=GetComponent<Animator>();
+        m_AudioSource=GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,6 +23,8 @@ public class ItemScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         m_Animator.SetTrigger("Get");
+        if(!isPlaySE) m_AudioSource.Play();
+        isPlaySE = true;
      //   DestroySelf();
 
     }
