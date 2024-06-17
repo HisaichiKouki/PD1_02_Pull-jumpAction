@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PullingJump : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem particleprefab;
+
     private Rigidbody rb_;
     private Vector3 clickPosition_;
     [SerializeField, Header("ÉpÉèÅ[")] private float power_=10;
@@ -33,6 +35,13 @@ public class PullingJump : MonoBehaviour
             if (dist.sqrMagnitude == 0) { return; }
             rb_.velocity=dist.normalized*power_;
             ShotCountScript.shotCounter++;
+            particleprefab.Play();
+            particleprefab.transform.position = transform.position;
+            particleprefab.transform.LookAt(dist);
+            //GameObject particleObj= Instantiate(particleprefab);
+            //particleObj.transform.position=transform.position;
+
+            //particleObj.transform.LookAt(dist);
         }
 
        

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BlockMove : MonoBehaviour
 {
+
     public float moveTime;
     public float moveSpeed;
 
