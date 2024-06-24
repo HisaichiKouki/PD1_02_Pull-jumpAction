@@ -11,12 +11,14 @@ public class PullingJump : MonoBehaviour
     [SerializeField, Header("ÉpÉèÅ[")] private float power_=10;
 
     private bool isCanJump = false;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
     Physics.gravity=new Vector3(0,-9.8f,0);
         rb_ = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class PullingJump : MonoBehaviour
             ShotCountScript.shotCounter++;
             particleprefab.Play();
             particleprefab.transform.LookAt(dist);
+            audioSource.Play();
             //GameObject particleObj= Instantiate(particleprefab);
             //particleObj.transform.position=transform.position;
 
