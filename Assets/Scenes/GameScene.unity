@@ -2219,6 +2219,26 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3281536132449276908, guid: 1f9d3c6900815d14ab575d9c8860e475, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281536132449276908, guid: 1f9d3c6900815d14ab575d9c8860e475, type: 3}
+      propertyPath: ShapeModule.m_Position.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281536132449276908, guid: 1f9d3c6900815d14ab575d9c8860e475, type: 3}
+      propertyPath: ShapeModule.m_Position.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281536132449276908, guid: 1f9d3c6900815d14ab575d9c8860e475, type: 3}
+      propertyPath: ShapeModule.m_Position.z
+      value: -2.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166750969521440965, guid: 1f9d3c6900815d14ab575d9c8860e475, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8939496045424850941, guid: 1f9d3c6900815d14ab575d9c8860e475, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.6230633

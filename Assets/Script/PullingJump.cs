@@ -22,9 +22,10 @@ public class PullingJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
 
-       if(Input.GetMouseButtonDown(0))
+        particleprefab.transform.position = transform.position;
+
+        if (Input.GetMouseButtonDown(0))
         {
             clickPosition_=Input.mousePosition;
         }
@@ -36,7 +37,6 @@ public class PullingJump : MonoBehaviour
             rb_.velocity=dist.normalized*power_;
             ShotCountScript.shotCounter++;
             particleprefab.Play();
-            particleprefab.transform.position = transform.position;
             particleprefab.transform.LookAt(dist);
             //GameObject particleObj= Instantiate(particleprefab);
             //particleObj.transform.position=transform.position;
